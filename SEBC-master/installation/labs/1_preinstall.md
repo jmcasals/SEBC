@@ -56,3 +56,7 @@ Unit ntpd.service could not be found.
 choose_repo         network             rhnsd
 netconsole          rh-cloud-firstboot
 [root@ip-192-168-0-51 ec2-user]# ps -aux|grep nscd
+  
+  [root@ip-192-168-0-175 ec2-user]# find / -type f -name "*nsc*"
+  
+  UNEXISTING DAEMONS
