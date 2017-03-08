@@ -25,9 +25,7 @@ https://www.cloudera.com/documentation/enterprise/5-5-x/topics/cm_ag_upgrading_c
 
 ----------------------------------------------------------------------------
 Give the tsquery statement used to chart Hue's CPU utilization?
-
-select cpu_system_rate + cpu_user_rate where category=ROLE and serviceName=$SERVICENAME
-
+select cpu_system_rate + cpu_user_rate where category=ROLE and serviceName="hue"
 -----------------------------------------------------------------------------
 
 Name all the roles that make up the Hive service
