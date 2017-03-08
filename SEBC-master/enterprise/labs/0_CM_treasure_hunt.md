@@ -39,4 +39,9 @@ WebHCat Server
 
 What steps must be completed before integrating Cloudera Manager with Kerberos?
 
-Ensure you have secured communication between the Cloudera Manager Server and Agents before you enable Kerberos on your cluster. 
+Must be installed these packages:
+
+  #openldap-clients on the Cloudera Manager Server host
+
+  #krb5-workstation, krb5-libs on ALL hosts
+
