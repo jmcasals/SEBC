@@ -1,6 +1,6 @@
 What is ubertask optimization?
 
-Ubertask: certain 'small tasks' suc as ==> 
+Ubertask: certain 'small tasks' such as ==> 
 "By default a job that has less than 10 mappers only and one reducer, and the input size is less than the size of one HDFS block is said to be small job. 
 This small job hadoop will consider as Uber task. So the hadoop job will significantly run faster for 'small' jobs also."
 
