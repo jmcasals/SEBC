@@ -1,6 +1,6 @@
 
 
-wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.30.tar.gz /tmp/mysql-connector.tar.gz
+
 
 mkdir -p /usr/share/java/
 cp -v ./mysql-connector-java-5.1.30.tar.gz /usr/share/java/
