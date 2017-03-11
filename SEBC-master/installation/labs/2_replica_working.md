@@ -1,7 +1,9 @@
+MARIA DB REPLICA WORKING:
+
 MariaDB [(none)]>  SHOW SLAVE STATUS \G
 *************************** 1. row ***************************
                Slave_IO_State: Waiting for master to send event
-                  Master_Host: 34.249.129.61
+                  Master_Host: 34.251.238.165
                   Master_User: root
                   Master_Port: 3306
                 Connect_Retry: 60
