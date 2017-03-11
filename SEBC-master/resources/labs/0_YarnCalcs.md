@@ -9,3 +9,5 @@ So + 16 Gb of RAM just in case if the RAM that we allocate in the spreadsheet is
 maximum number of cores that we assign. Basically the system must have enought cores and RAM to perform well.
 
 This is a prediction. It's important to monitor how it runs in the later stages of a project or when production stack is going to be released.
+
+Some heap was increased as well. Just in case.
