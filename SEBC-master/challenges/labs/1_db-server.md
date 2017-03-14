@@ -1,15 +1,13 @@
-
-
 sudo yum install mariadb-server
 sudo service mariadb stop
  
-
+---------------------------------------------------
 
 mkdir -p /usr/share/java/
 cp -v ./mysql-connector-java-5.1.30.tar.gz /usr/share/java/
 ls /usr/share/java
 
-
+---------------------------------------------------
 
 /usr/bin/mysql_secure_installation
 
@@ -72,7 +70,10 @@ All done!  If you've completed all of the above steps, your MariaDB
 installation should now be secure.
 
 Thanks for using MariaDB!
-[root@ip-192-168-0-110 ~]# service mariadb restart
+
+---------------------------------------------------
+
+service mariadb restart
 Redirecting to /bin/systemctl restart  mariadb.service
 [root@ip-192-168-0-110 ~]# mysql -u root -p
 Enter password:
