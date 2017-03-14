@@ -31,13 +31,15 @@ repolist: 14,253
 
 
 adduser ronaldo -u 2016
-adduser neymar -u 2016
-adduser: UID 2016 is not unique
 adduser neymar -u 2010
 groupadd barca
 groupadd merengues
 usermod -G merengues neymar
 usermod -G barca ronaldo
+
+cat /etc/passwd|tail -2
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+neymar:x:2010:2010::/home/neymar:/bin/bash
 
 cat /etc/group |tail -2
 barca:x:2017:ronaldo
