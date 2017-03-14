@@ -9,35 +9,42 @@ drwxr-xr-x. 77 root root 8192 Mar 10 04:11 ../
 -rw-r--r--   1 root root  607 Mar 10 02:34 redhat-rhui-client-config.repo
 -rw-r--r--.  1 root root 8679 Mar 10 02:34 redhat-rhui.repo
 -rw-r--r--   1 root root   80 Mar 10 02:34 rhui-load-balancers.conf
+sudo /usr/bin/mysql_secure_installation -> To set root password
+sudo /usr/bin/mysql_secure_installation
+Remove anonymous users? [Y/n] y
+... Success!
+ 
+Normally, root should only be allowed to connect from 'localhost'.                                                                                                    This
+ensures that someone cannot guess at the root password from the netw                                                                                                  ork.
+ 
+Disallow root login remotely? [Y/n] y
+... Success!
+ 
+By default, MariaDB comes with a database named 'test' that anyone c                                                                                                  an
+access.  This is also intended only for testing, and should be remov                                                                                                  ed
+before moving into a production environment.
+ 
+Remove test database and access to it? [Y/n] y
+- Dropping test database...
+... Success!
+- Removing privileges on test database...
+... Success!
+ 
+Reloading the privilege tables will ensure that all changes made so                                                                                                   far
+will take effect immediately.
+ 
+Reload privilege tables now? [Y/n] y
+... Success!
+ 
+Cleaning up...
+ 
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+ 
+ 
+JDBC:
+wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.30.tar.gz
+tar zxvf mysql-connector-java-5.1.31.tar.gz
+mkdir /usr/share/java
+cp mysql-connector-java-5.1.30/mysql-connector-java-5.1.30-bin.jar  /usr/share/java/mysql-connector-java.jar
 
-a/jdk1.7.0_67-cloudera
-Verifying that we can write to /etc/cloudera-scm-server
-Creating SCM configuration file in /etc/cloudera-scm-server
-Executing:  /usr/java/jdk1.7.0_67-cloudera/bin/java -cp /usr/share/java/mysql-connector-java.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/schema/../lib/* com.cloudera.enterprise.dbutil.DbCommandExecutor /etc/cloudera-scm-server/db.properties com.cloudera.cmf.db.
-[                          main] DbCommandExecutor              INFO  Unable to login using supplied username/password.
-[                          main] DbCommandExecutor              ERROR Error when connecting to database.
-java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
-        at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1084)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:926)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1748)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1288)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2506)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2539)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2321)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)[mysql-connector-java.jar:]
-        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[:1.7.0_67]
-        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)[:1.7.0_67]
-        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[:1.7.0_67]
-        at java.lang.reflect.Constructor.newInstance(Constructor.java:526)[:1.7.0_67]
-        at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)[mysql-connector-java.jar:]
-        at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)[mysql-connector-java.jar:]
-        at java.sql.DriverManager.getConnection(DriverManager.java:571)[:1.7.0_67]
-        at java.sql.DriverManager.getConnection(DriverManager.java:215)[:1.7.0_67]
-        at com.cloudera.enterprise.dbutil.DbCommandExecutor.testDbConnection(DbCommandExecutor.java:253)[db-common-5.10.0.jar:]
-        at com.cloudera.enterprise.dbutil.DbCommandExecutor.main(DbCommandExecutor.java:138)[db-common-5.10.0.jar:]
-[                          main] DbCommandExecutor              ERROR Exiting with exit code 8
---> Error 8, ignoring (because force flag is set)
