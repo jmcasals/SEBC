@@ -9,5 +9,6 @@ drwxr-xr-x   - hdfs   supergroup          0 2017-03-14 12:10 /user/ronaldo
 
 
 
-
+hdfs ../api/v14/hosts
+Error: Could not find or load main class ...api.v14.hosts
 
