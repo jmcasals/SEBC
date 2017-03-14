@@ -10,3 +10,8 @@ drwxr-xr-x. 76 root root 8192 Mar 14 10:05 ../
 -rw-r--r--.  1 root root   80 Mar 14 06:33 rhui-load-balancers.conf
 
 
+Command for scm_prepare_database.sh ->
+     sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql -h ip-192-168-0-115.eu-west-1.compute.internal -uroot -plolo --scm-host localhost scm scm scm
+
+
+
