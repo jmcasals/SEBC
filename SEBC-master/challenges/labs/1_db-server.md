@@ -1,5 +1,8 @@
 
 
+sudo yum install mariadb-server
+sudo service mariadb stop
+ 
 
 
 mkdir -p /usr/share/java/
