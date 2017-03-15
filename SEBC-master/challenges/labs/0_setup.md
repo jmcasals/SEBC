@@ -5,6 +5,35 @@ Casals Cloudera BCCh-3		34.249.240.30		192.168.0.145
 Casals Cloudera BCCh-4		34.251.103.54		192.168.0.212
 Casals Cloudera BCCh-5		34.252.111.206		192.168.0.40
 
+Lattest IPs were:
+
+
+
+Casals Cloudera BCCh-1
+34.248.238.199
+192.168.0.115
+
+Casals Cloudera BCCh-2
+34.250.19.251
+192.168.0.99
+
+Casals Cloudera BCCh-3
+34.249.240.30***************
+192.168.0.187
+
+Casals Cloudera BCCh-4
+34.251.103.54
+192.168.0.90
+
+Casals Cloudera BCCh-5
+34.252.241.132
+192.168.0.219
+
+Important: once rebooted the AWS instances changed both the internal and external ip.
+
+Tell me when start the cluster again if you wish. Right now it's stopped.
+
+
 root/lolo
 
 
